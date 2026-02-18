@@ -1,12 +1,12 @@
 //function 
-console.log(greet("hi"));
+// console.log(greet("hi"));
 
 function greet(name) {  
   console.log("Hello " + name);
   return 2;
 }
 
-greet("Ali");      
+// greet("Ali");      
 
 // let a =22;
 
@@ -15,14 +15,63 @@ function add(a=2, b=3) {
   return a + b;
 }
 
-let host = function add( fun){
-  console.log("host hi")
-  fun();
+// let host = function add( fun){
+//   console.log("host hi")
+//   fun();
+// }
+
+// host(add);
+
+
+
+
+
+
+console.log('today');
+
+
+let obj = {
+  a : 'e',
+  add : function method(){
+    console.log(this.a)
+  }
 }
 
-host(add);
+let obj1 = {
+  a : 'e',
+  add : () => {
+    console.log(this)
+  }
+}
+
+// console.log(obj.add())
+// console.log(obj1.add())
 
 
+function processUser(name, callback) {
+  console.log("Processing " + name);
+  callback();
+}
+
+let host = function add( fun){
+  console.log("host hi")
+
+}
+// processUser("Ali", function() {
+//   console.log("Done!");
+// });
+
+processUser("Ali", host );
+
+
+// def* numbers() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// };
+
+// const gen = numbers();
+// console.log(gen.next().value);
 
 
 
@@ -291,7 +340,7 @@ function* counter() {
 
 const count = counter();
 
-console.log(count.next().value); // 1
+console.log(count.next()); // 1
 console.log(count.next().value); // 2
 console.log(count.next().value); // 3
 
