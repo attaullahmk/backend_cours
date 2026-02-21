@@ -111,22 +111,22 @@
 
 
 
-// // const user = {
-// //   name: "Ali",
-// //   address: {
-// //     city: "Lahore"
-// //   }
-// // };
+const user = {
+  name: "Ali",
+  address: {
+    city: "Lahore"
+  }
+};
 
-// // // shallow copy
-// // const copyUser = { ...user };
+// shallow copy
+const copyUser = { ...user };
 
-// // copyUser.name = "Ahmed";            // changes only copy
-// // copyUser.address.city = "Karachi";  // changes BOTH!
+copyUser.name = "Ahmed";            // changes only copy
+copyUser.address.city = "Karachi";  // changes BOTH!
 
 
-// // console.log(user.address.city); 
-// // // Karachi ❗ original object changed
+console.log(user.address.city); 
+// Karachi ❗ original object changed
 
 
 
@@ -155,16 +155,16 @@
 
 
 
-    let user = { name1: "Ali", age: 22 };
-     let { name1, age } = user;
-       console.log(name1);   
+//     let user = { name1: "Ali", age: 22 };
+//      let { name1, age } = user;
+//        console.log(name1);   
 
 
 
-   let a = { x: 1 , t : 2};
-    let b = { y: 2 }; 
-    let c = { ...a, ...b }; 
-    console.log(c)
+//    let a = { x: 1 , t : 2};
+//     let b = { y: 2 }; 
+//     let c = { ...a, ...b }; 
+//     console.log(c)
 
 
 
